@@ -230,11 +230,6 @@ require get_template_directory() . '/install/plugin-required.php';
 require  get_template_directory() . '/install/import-pack/functions.php';
 
 /**
- * Theme elementor lemon spa
- */
-require get_template_directory() . '/elementor-lemon-spa/functions.php';
-
-/**
  * Validation form comment
  */
 add_action('wp_footer', 'lemon_comment_validation_init');
