@@ -10,6 +10,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 define( 'LEMON_ELEMENTOR_VERSION', '2.6.1' );
+define('THEME_VERSION', WP_DEBUG ? rand() : '1.0');
+define('THEME_URI', get_template_directory_uri());
+define('THEME_PATH', get_template_directory());
+define('THEME_URI_DIST', get_template_directory_uri() . '/dist');
 
 if ( ! isset( $content_width ) ) {
 	$content_width = 800; // Pixels.
@@ -264,3 +268,17 @@ function lemon_comment_validation_init(){
     <?php
     }
 }
+
+require THEME_PATH . '/resources/functions/ajax.php';
+require THEME_PATH . '/resources/functions/reset.php';
+require THEME_PATH . '/resources/functions/initialize.php';
+require THEME_PATH . '/resources/functions/assets.php';
+require THEME_PATH . '/resources/functions/menus.php';
+require THEME_PATH . '/resources/functions/widgets.php';
+require THEME_PATH . '/resources/functions/post-types.php';
+require THEME_PATH . '/resources/functions/meta.php';
+require THEME_PATH . '/resources/functions/images.php';
+require THEME_PATH . '/resources/functions/helpers.php';
+require THEME_PATH . '/resources/functions/template-tags.php';
+require THEME_PATH . '/resources/functions/hooks.php';
+require THEME_PATH . '/resources/functions/template-func.php';
