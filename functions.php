@@ -277,3 +277,4 @@ require THEME_PATH . '/resources/functions/helpers.php';
 require THEME_PATH . '/resources/functions/template-tags.php';
 require THEME_PATH . '/resources/functions/hooks.php';
 require THEME_PATH . '/resources/functions/template-func.php';
+require THEME_PATH . '/resources/functions/shortcode.php';
