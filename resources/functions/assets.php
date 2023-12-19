@@ -1,37 +1,37 @@
 <?php
 
-function lemon_get_assets($name, $extension)
-{
-	$manifest = lemon_get_manifest();
-	$file = !empty($manifest['/' . $extension . '/' . $name . '.' . $extension]) ? $manifest['/' . $extension . '/' . $name . '.' . $extension] : false;
-	if (!$file) {
-		return false;
-	}
+// function lemon_get_assets($name, $extension)
+// {
+// 	$manifest = lemon_get_manifest();
+// 	$file = !empty($manifest['/' . $extension . '/' . $name . '.' . $extension]) ? $manifest['/' . $extension . '/' . $name . '.' . $extension] : false;
+// 	if (!$file) {
+// 		return false;
+// 	}
 
-	return THEME_URI_DIST . $file;
-}
+// 	return THEME_URI_DIST . $file;
+// }
 
-function lemon_get_manifest()
-{
+// function lemon_get_manifest()
+// {
 
-	$dir = THEME_PATH . '/dist/';
+// 	$dir = THEME_PATH . '/dist/';
 
-	if (file_exists($dir . 'mix-manifest.json')) {
-		$manifest = json_decode(file_get_contents($dir . 'mix-manifest.json'), true);
-	} else {
-		$manifest = false;
-	}
+// 	if (file_exists($dir . 'mix-manifest.json')) {
+// 		$manifest = json_decode(file_get_contents($dir . 'mix-manifest.json'), true);
+// 	} else {
+// 		$manifest = false;
+// 	}
 
-	return $manifest;
-}
+// 	return $manifest;
+// }
 
 add_action('wp_enqueue_scripts', function () {
 
 	$upload_dir = wp_upload_dir();
 
-	wp_enqueue_style('theme-font', THEME_URI . '/resources/assets/fonts/fonts.css', [], THEME_VERSION);
+	// wp_enqueue_style('theme-font', THEME_URI . '/resources/assets/fonts/fonts.css', [], THEME_VERSION);
 	//Global
-	wp_enqueue_style('lemon-theme-general-styles', $upload_dir['baseurl'] . '/styles_uploads/variable-css.css', [], THEME_VERSION);
+	// wp_enqueue_style('lemon-theme-general-styles', $upload_dir['baseurl'] . '/styles_uploads/variable-css.css', [], THEME_VERSION);
 	if (isset($_GET['home'])) {
 		wp_enqueue_style('lemon-theme-home-styles', lemon_get_style_home($_GET['home']), [], THEME_VERSION);
 	}
