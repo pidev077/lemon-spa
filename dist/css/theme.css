@@ -141,6 +141,7 @@
 .woocommerce .select2-container--default .select2-selection--single {
   padding: 6px 10px;
   height: auto;
+  border: 0;
 }
 
 .woocommerce .select2-container--default .select2-selection--single .select2-selection__arrow {
@@ -155,7 +156,11 @@
 }
 
 .woocommerce .select2-container--default .select2-dropdown {
-  margin-top: 36px;
+  border: 0;
+}
+
+.woocommerce .select2-container--default .select2-results__options {
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .woocommerce .select2-container--default .select2-results__option {
@@ -373,6 +378,10 @@
   transition: all 0.3s;
 }
 
+.woocommerce ul.products li.product .woocommerce-loop-product__header .button.loading::after {
+  position: unset;
+}
+
 .woocommerce ul.products li.product .woocommerce-loop-product__header .button .icon {
   display: flex;
   align-items: center;
@@ -521,6 +530,18 @@
   border-radius: 2px;
 }
 
+@media screen and (max-width: 767px) {
+  .woocommerce .shop-sidebar .wg-wrap {
+    padding: 32px;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .woocommerce .shop-sidebar .wg-wrap {
+    padding: 30px 20px;
+  }
+}
+
 .woocommerce .shop-sidebar .wg-wrap:not(:last-child) {
   margin-bottom: 40px;
 }
@@ -530,6 +551,7 @@
   font-size: 20px;
   font-weight: 600;
   line-height: 125%;
+  margin-top: 0;
   margin-bottom: 16px;
 }
 
@@ -538,6 +560,7 @@
   font-size: 20px;
   font-weight: 600;
   line-height: 125%;
+  margin-top: 0;
   margin-bottom: 16px;
 }
 
@@ -573,6 +596,10 @@
   padding-left: 12px;
 }
 
+.woocommerce .shop-sidebar .wg-wrap .wc-blocks-filter-wrapper .wc-block-price-filter {
+  margin-bottom: 0;
+}
+
 .woocommerce .shop-sidebar .wg-wrap .wc-blocks-filter-wrapper .wc-block-components-price-slider__range-input-wrapper {
   background: #eaeaea;
 }
@@ -581,11 +608,16 @@
   --range-color: hsl(241, 100%, 33%);
 }
 
+.woocommerce .shop-sidebar .wg-wrap .wc-blocks-filter-wrapper .wc-block-price-filter__controls {
+  margin-bottom: 0;
+}
+
 .woocommerce .shop-sidebar .wg-wrap .wc-blocks-filter-wrapper .wc-block-price-filter__controls input {
   outline-color: hsl(241, 100%, 33%);
 }
 
 .woocommerce .shop-sidebar .wg-wrap .wc-blocks-filter-wrapper button {
+  margin-top: 16px;
   font-size: 13px;
   font-weight: 600;
   line-height: 20px;
@@ -604,7 +636,7 @@
   width: 60px;
   float: left;
   margin-left: 0;
-  margin-right: 4px;
+  margin-right: 10px;
 }
 
 .woocommerce .shop-sidebar .wg-wrap .product_list_widget li del .amount {

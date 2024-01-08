@@ -67,6 +67,7 @@
         .select2-selection--single{
             padding: 6px 10px;
             height: auto;
+            border: 0;
             .select2-selection__arrow{
                 top: 50%;
                 transform: translateY(-50%);
@@ -78,7 +79,11 @@
             }
         }
         .select2-dropdown{
-            margin-top: 36px;
+            // margin-top: 36px;
+            border: 0;
+        }
+        .select2-results__options{
+            border: 1px solid rgba(0, 0, 0, 0.1)
         }
         .select2-results__option{
             font-size: 14px;
@@ -272,6 +277,11 @@
                     transform: translateX(-50%) translateY(calc(-50% + 40px));
                     -webkit-transition: all .3s;
                     transition: all .3s;
+                    &.loading{
+                        &::after{
+                            position: unset;
+                        }
+                    }
                     .icon{
                         display: flex;
                         align-items: center;
@@ -291,6 +301,7 @@
                         text-overflow: ellipsis;
                         overflow: hidden;
                     }
+
                     &:hover{
                         .icon{
                             background-color: hsl( 241, 100%, 23% );
@@ -419,6 +430,12 @@
             background: #FFFFFF;
             padding: 32px 40px;
             border-radius: 2px;
+            @media screen and (max-width: 767px) {
+                padding: 32px;
+            }
+            @media screen and (max-width: 575.98px) {
+                padding: 30px 20px;
+            }
             &:not(:last-child){
                 margin-bottom: 40px;
             }
@@ -428,6 +445,7 @@
                 font-size: 20px;
                 font-weight: 600;
                 line-height: 125%;
+                margin-top: 0;
                 margin-bottom: 16px;
             }
             .wg-title{
@@ -435,6 +453,7 @@
                 font-size: 20px;
                 font-weight: 600;
                 line-height: 125%;
+                margin-top: 0;
                 margin-bottom: 16px;
             }
 
@@ -466,6 +485,9 @@
             }
 
             .wc-blocks-filter-wrapper{
+                .wc-block-price-filter{
+                    margin-bottom: 0;
+                }
                 .wc-block-components-price-slider__range-input-wrapper{
                     background: #eaeaea;
                     .wc-block-components-price-slider__range-input-progress{
@@ -473,11 +495,13 @@
                     }
                 }
                 .wc-block-price-filter__controls{
+                    margin-bottom: 0;
                     input{
                         outline-color: hsl(241, 100%, 33%);
                     }
                 }
                 button{
+                    margin-top: 16px;  
                     font-size: 13px;
                     font-weight: 600;
                     line-height: 20px;
@@ -500,7 +524,7 @@
                         width: 60px;
                         float: left;
                         margin-left: 0;
-                        margin-right: 4px;
+                        margin-right: 10px;
                     }
                     del{
                         .amount{
