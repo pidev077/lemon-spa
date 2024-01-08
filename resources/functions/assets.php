@@ -37,6 +37,13 @@ add_action('wp_enqueue_scripts', function () {
 	}
 	
 	wp_enqueue_style('app-styles', lemon_get_assets('theme', 'css'), [], THEME_VERSION);
+
+	if( is_shop() || is_product_category() ) {
+		wp_enqueue_style( 'select2' );
+		wp_enqueue_script( 'select2' );
+		wp_enqueue_script('lemon-woocommerce', THEME_URI . '/resources/assets/js/components/woocommerce.js', ['jquery'], THEME_VERSION, true);
+
+	}
 	// wp_enqueue_script('manifest-scripts', lemon_get_assets('manifest', 'js'), ['jquery'], THEME_VERSION, true);
 	wp_enqueue_script('vendor-scripts', lemon_get_assets('vendor', 'js'), ['jquery'], THEME_VERSION, true);
 	wp_enqueue_script('app-scripts', lemon_get_assets('theme', 'js'), ['jquery'], THEME_VERSION, true);
