@@ -32,6 +32,11 @@ add_action('wp_enqueue_scripts', function () {
 	// wp_enqueue_style('theme-font', THEME_URI . '/resources/assets/fonts/fonts.css', [], THEME_VERSION);
 	//Global
 	// wp_enqueue_style('lemon-theme-general-styles', $upload_dir['baseurl'] . '/styles_uploads/variable-css.css', [], THEME_VERSION);
+	
+	// AOS
+	// wp_enqueue_style('lemon-aos', 'https://unpkg.com/aos@2.3.1/dist/aos.css', [], THEME_VERSION);
+	// wp_enqueue_script('lemon-aos', 'https://unpkg.com/aos@2.3.1/dist/aos.js', ['jquery'], THEME_VERSION, true);
+
 	if (isset($_GET['home'])) {
 		wp_enqueue_style('lemon-theme-home-styles', lemon_get_style_home($_GET['home']), [], THEME_VERSION);
 	}

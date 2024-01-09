@@ -25,6 +25,35 @@ add_action('wp', function () {
 
 });
 
+// customize the archive title
+add_filter('get_the_archive_title', function ($title) {
+	if (is_category()) {
+		$title = single_cat_title('', false);
+	} elseif (is_tag()) {
+		$title = single_tag_title('', false);
+	} elseif (is_author()) {
+		$title = get_the_author();
+	} elseif (is_tax()) { //for custom post types
+		$title = sprintf(__('%1$s'), single_term_title('', false));
+	} elseif (is_post_type_archive()) {
+		$title = post_type_archive_title('', false);
+	}
+	return $title;
+});
+
+/**
+ * navigation template
+ * @return void
+ */
+add_action('lemon_hook_blog_posts_navigation', 'lemon_blog_posts_navigation');
+
+add_filter('next_posts_link_attributes', 'lemon_posts_link_attributes');
+add_filter('previous_posts_link_attributes', 'lemon_posts_link_attributes');
+
+function lemon_posts_link_attributes() {
+  return 'class="page-button"';
+}
+
 // Remove the default content product part
 remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10 );
 remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_rating', 5 );

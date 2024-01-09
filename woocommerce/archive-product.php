@@ -40,7 +40,7 @@ $classes = $has_sidebar ? 'column-left': '';
     <section class="main-woocommerce bt-section-space <?php echo $has_sidebar ? 'has-sidebar' : ''; ?>" role="main" itemprop="mainEntity" itemscope="itemscope" itemtype="http://schema.org/Blog">
         <div class="container">
             <div class="row">
-                <div class="bt-content-area <?php echo $classes; ?>">
+                <div class="bt-content-area <?php echo esc_attr($classes); ?>">
                     <div class="bt-col-inner">
                             <?php
                                 /**

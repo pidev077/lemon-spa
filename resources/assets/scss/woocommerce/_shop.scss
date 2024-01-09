@@ -9,43 +9,6 @@
         }
     }
 
-
-
-    .container{
-        max-width: 1170px;
-        margin: 0 auto;
-    }
-
-    .has-sidebar{
-        .column-left{
-            width: calc(70% - 50px);
-            @media screen and (max-width: 1024px) {
-                width: 100%;
-            }
-        }
-    }
-
-    .row{
-        display: flex;
-        justify-content: space-between;
-        @media screen and (max-width: 1024px) {
-            flex-wrap: wrap;
-        }
-    }
-
-    .column-left{
-        width: 100%;
-    }
-    .column-right{
-        width: 30%;
-        @media screen and (max-width: 1024px) {
-            width: 100%;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-    }
-
     .woocommerce-breadcrumb{
         font-size: 14px;
         font-weight: 600;
@@ -55,7 +18,7 @@
         a{
             color: #333333;
             &:hover{
-                color: hsl( 241, 100%, 33% );
+                color: #D19D64;
             }
         }
     }
@@ -80,7 +43,7 @@
             margin: 0;
             font-size: 14px;
             line-height: 24px;
-            color: hsl( 241, 100%, 33% );
+            color: #D19D64;
         }
     
         .woocommerce-ordering{
@@ -115,7 +78,7 @@
                 padding: 0;
                 font-size: 14px;
                 line-height: 24px;
-                color: hsl( 241, 100%, 33% );
+                color: #D19D64;
             }
         }
         .select2-dropdown{
@@ -125,7 +88,7 @@
             }
             .select2-search__field{
                 outline-offset: 0;
-                outline-color: hsl( 241, 100%, 33% );
+                outline-color: #D19D64;
             }
         }
         .select2-results__options{
@@ -143,11 +106,11 @@
                 border-bottom: 0;
             }
             &--highlighted[aria-selected]{
-                background-color: hsl( 241, 100%, 33% );
+                background-color: #D19D64;
                 color: #FFFFFF;
             }
             &:hover{
-                background-color: hsl( 241, 100%, 33% );
+                background-color: #D19D64;
                 color: #FFFFFF;
             }
         }
@@ -312,7 +275,7 @@
                     top: 50%;
                     left: 50%;
                     font-size: 14px;
-                    color: hsl( 241, 100%, 23% );
+                    color: #D19D64;
                     background-color: #FFFFFF;
                     margin: 0;
                     padding: 0 15px 0 0;
@@ -335,7 +298,7 @@
                         width: 44px;
                         height: 44px;
                         min-width: 44px;
-                        background-color: hsl( 241, 100%, 33% );
+                        background-color: #D19D64;
                         border-radius: 2px 0 0 2px;
                         -webkit-transition: all .3s;
                         transition: all .3s;
@@ -350,7 +313,7 @@
 
                     &:hover{
                         .icon{
-                            background-color: hsl( 241, 100%, 23% );
+                            background-color: #D17A1D;
                         }
                     }
                 }
@@ -363,7 +326,7 @@
                     font-weight: 600;
                     text-align: center;
                     color: #FFFFFF;
-                    background:  hsl( 241, 100%, 33% );
+                    background:  #D19D64;
                     padding: 8px 0;
                     z-index: 3;
                     opacity: 0;
@@ -372,7 +335,7 @@
                     -webkit-transform: translateY(100%);
                     transform: translateY(100%);
                     &:hover{
-                        background-color: hsl( 241, 100%, 23% );
+                        background-color: #D17A1D;
                     }
                 }
             }
@@ -382,7 +345,7 @@
                 left: 10px;
                 right: auto;
                 z-index: 3;
-                background-color: hsl( 241, 100%, 33% );
+                background-color: #D19D64;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -407,14 +370,14 @@
                 -webkit-transition: all .3s;
                 transition: all .3s;
                 &:hover{
-                    color: hsl( 241, 100%, 33% );
+                    color: #D19D64;
                 }
             }
             .price{
                 font-size: 14px;
                 font-weight: 600;
                 line-height: 22px;
-                color: hsl( 241, 100%, 33% );
+                color: #D19D64;
                 margin-bottom: 0;
                 padding: 0 16px;
                 del{
@@ -427,7 +390,7 @@
                 margin: 3px 15px 0 0;
             
                 span{
-                    color: hsl( 241, 100%, 33% );
+                    color: #D19D64;
                 }
             }
         }
@@ -460,169 +423,16 @@
                     padding: 0.5em;
                     &.current{
                         color: #FFFFFF;
-                        background-color: hsl( 241, 100%, 33% );
+                        background-color: #D19D64;
                     }
                     &:hover{
                         color: #FFFFFF;
-                        background-color: hsl( 241, 100%, 33% );
+                        background-color: #D19D64;
                     }
                 }
             }
         }
 
-    }
-
-    .shop-sidebar{
-        .wg-wrap{
-            background: #FFFFFF;
-            padding: 32px 36px;
-            border-radius: 2px;
-            @media screen and (max-width: 767px) {
-                padding: 30px;
-            }
-            @media screen and (max-width: 575.98px) {
-                padding: 30px 16px;
-            }
-            &:not(:last-child){
-                margin-bottom: 40px;
-            }
-            
-            h3{
-                color: #002866;
-                font-size: 20px;
-                font-weight: 600;
-                line-height: 125%;
-                margin-top: 0;
-                margin-bottom: 16px;
-            }
-            .wg-title{
-                color: #002866;
-                font-size: 20px;
-                font-weight: 600;
-                line-height: 125%;
-                margin-top: 0;
-                margin-bottom: 16px;
-            }
-
-            ul{
-                list-style: none;
-                padding: 0;
-                margin: 0;
-                li{
-                    padding: 8px 0;
-                    &:first-child{
-                        padding-top: 0;
-                    }
-                    &:last-child{
-                        padding-bottom: 0;
-                    }
-                    a{
-                        color: #111111;
-                        -webkit-transition: all .3s;
-                        transition: all .3s;
-                        &:hover{
-                            color: hsl( 241, 100%, 33% );
-                        }
-                    }
-                    ul{
-                        padding-top: 8px;
-                        padding-left: 12px;
-                    }
-                }
-            }
-
-            form{
-                label{
-                    color: #002866;
-                    font-size: 20px;
-                    font-weight: 600;
-                    line-height: 125%;
-                    margin-top: 0;
-                    margin-bottom: 16px;
-                }
-
-                input[type=search]{
-                    line-height: 22px;
-                    font-size: 14px;
-                    outline-offset: 0;
-                    outline-color: hsl(241, 100%, 33%);
-                }
-
-                button{
-                    margin-left: 5px;
-                    font-weight: 600;
-                    font-size: 14px;
-                    line-height: 22px;
-                    border-color: hsl(241, 100%, 33%);
-                    background-color: hsl(241, 100%, 33%);
-                    color: #FFFFFF;
-                    transition: all 0.3s;
-                    &:hover{
-                        border-color: hsl(241, 100%, 23%);
-                        background-color: hsl(241, 100%, 23%);
-                    }
-                }
-            }
-
-            .wc-blocks-filter-wrapper{
-                .wc-block-price-filter{
-                    margin-bottom: 0;
-                }
-                .wc-block-components-price-slider__range-input-wrapper{
-                    background: #eaeaea;
-                    .wc-block-components-price-slider__range-input-progress{
-                        --range-color: hsl(241, 100%, 33%);
-                    }
-                }
-                .wc-block-price-filter__controls{
-                    margin-bottom: 0;
-                    input{
-                        outline-color: hsl(241, 100%, 33%);
-                    }
-                }
-                button{
-                    margin-top: 16px;  
-                    font-size: 13px;
-                    font-weight: 600;
-                    line-height: 20px;
-                    color: #FFFFFF;
-                    background-color: hsl( 241, 100%, 33% );
-                    padding: 4px 10px;
-                    border-radius: 2px;
-                    text-decoration: none;
-                    &:hover{
-                        background-color: hsl( 241, 100%, 23% );
-                    }
-                }
-            }
-
-            .product_list_widget{
-                li{
-                    img{
-                        width: 60px;
-                        float: left;
-                        margin-left: 0;
-                        margin-right: 10px;
-                    }
-                    del{
-                        .amount{
-                            color: #111111;
-                        }
-                    }
-                    .amount{
-                        font-size: 14px;
-                        font-weight: 500;
-                        color: hsl( 241, 100%, 33% );
-                    }
-                }
-
-            }
-
-            .wc-block-product-categories{
-                margin-bottom: 0;
-            }
-
-        }
     }
 
 
