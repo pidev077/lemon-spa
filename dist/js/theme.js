@@ -5,9 +5,17 @@
   !*** ./resources/assets/js/theme.js ***!
   \**************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
+/* WEBPACK VAR INJECTION */(function(jQuery) {(function ($) {
+  "use strict";
 
+  $(document).ready(function () {
+    console.log("check all vvv");
+  });
+  $(window).on("load", function () {});
+})(jQuery);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),
 
@@ -29,10 +37,10 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/buitantoan/Local Sites/lemonspa/app/public/wp-content/themes/lemon-spa/resources/assets/js/theme.js */"./resources/assets/js/theme.js");
-module.exports = __webpack_require__(/*! /Users/buitantoan/Local Sites/lemonspa/app/public/wp-content/themes/lemon-spa/resources/assets/scss/theme.scss */"./resources/assets/scss/theme.scss");
+__webpack_require__(/*! C:\Users\Vuong\Local Sites\lemon-spa-dev\app\public\wp-content\themes\lemon-spa\resources\assets\js\theme.js */"./resources/assets/js/theme.js");
+module.exports = __webpack_require__(/*! C:\Users\Vuong\Local Sites\lemon-spa-dev\app\public\wp-content\themes\lemon-spa\resources\assets\scss\theme.scss */"./resources/assets/scss/theme.scss");
 
 
 /***/ })
 
-},[[0,"/js/manifest"]]]);
+},[[0,"/js/manifest","/js/vendor"]]]);
