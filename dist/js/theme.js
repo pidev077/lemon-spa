@@ -5,21 +5,21 @@
   !*** ./resources/assets/js/theme.js ***!
   \**************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
+/* WEBPACK VAR INJECTION */(function(jQuery) {(function ($) {
+  "use strict";
 
-// console.log('theme-js');
-
-// AOS.init({
-//     duration: 1200,
-//     once: true,
-//     disable: 'mobile',
-// });
-
-// $(document).ready(function () {
-//     AOS.refresh();
-
-// });
+  $(document).ready(function () {
+    AOS.init({
+      duration: 1200,
+      once: true,
+      disable: 'mobile'
+    });
+  });
+  $(window).on("load", function () {});
+})(jQuery);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),
 
@@ -47,4 +47,4 @@ module.exports = __webpack_require__(/*! /Users/buitantoan/Local Sites/lemonspa/
 
 /***/ })
 
-},[[0,"/js/manifest"]]]);
+},[[0,"/js/manifest","/js/vendor"]]]);

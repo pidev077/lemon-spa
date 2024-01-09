@@ -1,13 +1,19 @@
+(function ($) {
+    "use strict";
 
-// console.log('theme-js');
+    $(document).ready(function () {
+        
+        AOS.init({
+            duration: 1200,
+            once: true,
+            disable: 'mobile',
+        });
+        
+    });
 
-// AOS.init({
-//     duration: 1200,
-//     once: true,
-//     disable: 'mobile',
-// });
+    $(window).on("load", function () {
+      
+    });
 
-// $(document).ready(function () {
-//     AOS.refresh();
+})(jQuery);
 
-// });

@@ -34,8 +34,8 @@ add_action('wp_enqueue_scripts', function () {
 	// wp_enqueue_style('lemon-theme-general-styles', $upload_dir['baseurl'] . '/styles_uploads/variable-css.css', [], THEME_VERSION);
 	
 	// AOS
-	// wp_enqueue_style('lemon-aos', 'https://unpkg.com/aos@2.3.1/dist/aos.css', [], THEME_VERSION);
-	// wp_enqueue_script('lemon-aos', 'https://unpkg.com/aos@2.3.1/dist/aos.js', ['jquery'], THEME_VERSION, true);
+	wp_enqueue_style('lemon-aos', 'https://unpkg.com/aos@2.3.1/dist/aos.css', [], THEME_VERSION);
+	wp_enqueue_script('lemon-aos', 'https://unpkg.com/aos@2.3.1/dist/aos.js', ['jquery'], THEME_VERSION, true);
 
 	if (isset($_GET['home'])) {
 		wp_enqueue_style('lemon-theme-home-styles', lemon_get_style_home($_GET['home']), [], THEME_VERSION);
@@ -49,9 +49,11 @@ add_action('wp_enqueue_scripts', function () {
 		wp_enqueue_script('lemon-woocommerce', THEME_URI . '/resources/assets/js/components/woocommerce.js', ['jquery'], THEME_VERSION, true);
 
 	}
-	// wp_enqueue_script('manifest-scripts', lemon_get_assets('manifest', 'js'), ['jquery'], THEME_VERSION, true);
-	wp_enqueue_script('vendor-scripts', lemon_get_assets('vendor', 'js'), ['jquery'], THEME_VERSION, true);
+	
 	wp_enqueue_script('app-scripts', lemon_get_assets('theme', 'js'), ['jquery'], THEME_VERSION, true);
+	wp_enqueue_script('manifest-scripts', lemon_get_assets('manifest', 'js'), ['jquery'], THEME_VERSION, true);
+	wp_enqueue_script('vendor-scripts', lemon_get_assets('vendor', 'js'), ['jquery'], THEME_VERSION, true);
+	
 
 	wp_localize_script('app-scripts', 'php_data', [
 		'admin_logged' => in_array('administrator', wp_get_current_user()->roles) ? 'yes' : 'no',
