@@ -70,6 +70,12 @@
   background: #f8f7f5;
 }
 
+.woocommerce.woocommerce-shop .site-main {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 90px 15px;
+}
+
 .woocommerce .container {
   max-width: 1170px;
   margin: 0 auto;

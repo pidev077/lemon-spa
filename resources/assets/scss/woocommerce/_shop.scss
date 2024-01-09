@@ -1,7 +1,15 @@
 .woocommerce{
     &.woocommerce-shop{
         background: #f8f7f5;
+        
+        .site-main{
+            max-width: 1170px;
+            margin: 0 auto;
+            padding: 90px 15px;
+        }
     }
+
+
 
     .container{
         max-width: 1170px;
