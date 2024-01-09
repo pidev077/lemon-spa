@@ -113,6 +113,9 @@
 @media screen and (max-width: 1024px) {
   .woocommerce .column-right {
     width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -530,6 +533,10 @@
 
 .woocommerce ul.products li.product .star-rating span {
   color: hsl(241, 100%, 33%);
+}
+
+.woocommerce nav.woocommerce-pagination {
+  margin-bottom: 30px;
 }
 
 .woocommerce nav.woocommerce-pagination ul.page-numbers {

@@ -40,6 +40,9 @@
         width: 30%;
         @media screen and (max-width: 1024px) {
             width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 
@@ -431,6 +434,7 @@
     }
 
     nav.woocommerce-pagination{
+        margin-bottom: 30px;
         ul.page-numbers{
             border: 1px solid #E7E5E4;
             li{
