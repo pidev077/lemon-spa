@@ -3,9 +3,8 @@
 
     $(document).ready(function () {
         
-        $('.woocommerce-ordering select').select2({
-            minimumResultsForSearch: Infinity
-        });
+        $('.woocommerce-ordering select').select2({});
+        
     });
 
     $(window).on("load", function () {

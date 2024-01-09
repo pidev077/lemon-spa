@@ -34,6 +34,21 @@
             width: 100%;
         }
     }
+
+    .woocommerce-breadcrumb{
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.5;
+        color: #002866;
+        text-transform: uppercase;
+        a{
+            color: #333333;
+            &:hover{
+                color: hsl( 241, 100%, 33% );
+            }
+        }
+    }
+
     .woocommerce-toolbar{
         display: flex;
         flex-wrap: wrap;
@@ -60,12 +75,25 @@
         .woocommerce-ordering{
             margin-bottom: 0;
         }
+
+        @media screen and (max-width: 767px) {
+            .woocommerce-result-count{
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            .woocommerce-ordering{
+                width: 100%;
+                .select2-container{
+                    width: 100% !important;
+                }
+            }
+        }
     }
 
     .select2-container--default{
         
         .select2-selection--single{
-            padding: 6px 10px;
+            padding: 8px 0;
             height: auto;
             border: 0;
             .select2-selection__arrow{
@@ -73,14 +101,21 @@
                 transform: translateY(-50%);
             }
             .select2-selection__rendered{
+                padding: 0;
                 font-size: 14px;
                 line-height: 24px;
                 color: hsl( 241, 100%, 33% );
             }
         }
         .select2-dropdown{
-            // margin-top: 36px;
             border: 0;
+            .select2-search--dropdown{
+                padding: 4px 0;
+            }
+            .select2-search__field{
+                outline-offset: 0;
+                outline-color: hsl( 241, 100%, 33% );
+            }
         }
         .select2-results__options{
             border: 1px solid rgba(0, 0, 0, 0.1)
@@ -130,7 +165,7 @@
             grid-template-columns: 1fr;
         }
 
-        @media screen and (min-width: 575.98px) {
+        @media screen and (min-width: 576px) {
             &.columns-6{
                 grid-template-columns: 1fr 1fr 1fr;
             }
@@ -428,13 +463,13 @@
     .shop-sidebar{
         .wg-wrap{
             background: #FFFFFF;
-            padding: 32px 40px;
+            padding: 32px 36px;
             border-radius: 2px;
             @media screen and (max-width: 767px) {
-                padding: 32px;
+                padding: 30px;
             }
             @media screen and (max-width: 575.98px) {
-                padding: 30px 20px;
+                padding: 30px 16px;
             }
             &:not(:last-child){
                 margin-bottom: 40px;
@@ -484,6 +519,39 @@
                 }
             }
 
+            form{
+                label{
+                    color: #002866;
+                    font-size: 20px;
+                    font-weight: 600;
+                    line-height: 125%;
+                    margin-top: 0;
+                    margin-bottom: 16px;
+                }
+
+                input[type=search]{
+                    line-height: 22px;
+                    font-size: 14px;
+                    outline-offset: 0;
+                    outline-color: hsl(241, 100%, 33%);
+                }
+
+                button{
+                    margin-left: 5px;
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 22px;
+                    border-color: hsl(241, 100%, 33%);
+                    background-color: hsl(241, 100%, 33%);
+                    color: #FFFFFF;
+                    transition: all 0.3s;
+                    &:hover{
+                        border-color: hsl(241, 100%, 23%);
+                        background-color: hsl(241, 100%, 23%);
+                    }
+                }
+            }
+
             .wc-blocks-filter-wrapper{
                 .wc-block-price-filter{
                     margin-bottom: 0;
@@ -516,8 +584,6 @@
                 }
             }
 
-
-
             .product_list_widget{
                 li{
                     img{
@@ -538,6 +604,10 @@
                     }
                 }
 
+            }
+
+            .wc-block-product-categories{
+                margin-bottom: 0;
             }
 
         }
