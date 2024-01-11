@@ -1,0 +1,8 @@
+.be-header-dentist{
+    &.elementor-sticky--active{
+        -webkit-animation-name: fadeInDown;
+        animation-name: fadeInDown;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+    }
+}

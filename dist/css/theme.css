@@ -66,6 +66,47 @@
   }
 }
 
+.elementor-widget-button.be-btn-dentist-blue a.elementor-button-link,
+.elementor-widget-button.be-btn-dentist a.elementor-button-link {
+  position: relative;
+  z-index: 9;
+}
+
+.elementor-widget-button.be-btn-dentist-blue a.elementor-button-link::after,
+.elementor-widget-button.be-btn-dentist a.elementor-button-link::after {
+  content: " ";
+  display: inline-block;
+  position: absolute;
+  z-index: -1;
+  height: 0;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  transition: all 0.25s ease-in-out;
+}
+
+.elementor-widget-button.be-btn-dentist-blue a.elementor-button-link:hover,
+.elementor-widget-button.be-btn-dentist a.elementor-button-link:hover {
+  background-color: transparent !important;
+  color: #fff !important;
+}
+
+.elementor-widget-button.be-btn-dentist-blue a.elementor-button-link:hover::after,
+.elementor-widget-button.be-btn-dentist a.elementor-button-link:hover::after {
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.elementor-widget-button.be-btn-dentist a.elementor-button-link::after {
+  background: #000;
+}
+
+.elementor-widget-button.be-btn-dentist-blue a.elementor-button-link::after {
+  background: #0181e4;
+}
+
 .blog,
 .archive {
   background: #f8f7f5;
@@ -648,6 +689,11 @@
   .posts .post-item__title {
     font-size: 18px;
   }
+}
+
+.be-header-dentist.elementor-sticky--active {
+  animation-name: fadeInDown;
+  animation-duration: 1s;
 }
 
 .woocommerce.woocommerce-shop {

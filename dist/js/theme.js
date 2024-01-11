@@ -41,8 +41,8 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/buitantoan/Local Sites/lemonspa/app/public/wp-content/themes/lemon-spa/resources/assets/js/theme.js */"./resources/assets/js/theme.js");
-module.exports = __webpack_require__(/*! /Users/buitantoan/Local Sites/lemonspa/app/public/wp-content/themes/lemon-spa/resources/assets/scss/theme.scss */"./resources/assets/scss/theme.scss");
+__webpack_require__(/*! C:\Users\Vuong\Local Sites\lemon-spa-dev\app\public\wp-content\themes\lemon-spa\resources\assets\js\theme.js */"./resources/assets/js/theme.js");
+module.exports = __webpack_require__(/*! C:\Users\Vuong\Local Sites\lemon-spa-dev\app\public\wp-content\themes\lemon-spa\resources\assets\scss\theme.scss */"./resources/assets/scss/theme.scss");
 
 
 /***/ })
