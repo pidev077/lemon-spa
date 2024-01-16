@@ -173,18 +173,16 @@ if (!function_exists('lemon_single_post_related')) {
 						<?php
 						while ($article_query->have_posts()) {
 							$article_query->the_post();
-							
+
 							$post_date   = get_the_date( );
 							$post_author_id = get_post_field( 'post_author', get_the_ID() );
 							$post_author_name = get_the_author_meta( 'display_name', $post_author_id );
 							$post_author_url = get_author_posts_url( $post_author_id );
 						?>
 							<div class="post-related-item">
-								<div class="post-related-item__thumbnail">
-									<a href="<?php echo esc_url(get_the_permalink()); ?>">
-										<?php echo get_the_post_thumbnail(get_the_ID(), 'full'); ?>
-									</a>
-								</div>
+								<a class="post-related-item__thumbnail" href="<?php echo esc_url(get_the_permalink()); ?>">
+									<?php echo get_the_post_thumbnail(get_the_ID(), 'full'); ?>
+								</a>
 								<div class="post-related-item__content">
 									<a href="<?php echo esc_url(get_the_permalink()); ?>" class="post-related-item__title-link">
 										<h3 class="post-related-item__title"><?php echo get_the_title(); ?></h3>

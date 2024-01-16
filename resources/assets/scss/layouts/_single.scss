@@ -1,6 +1,6 @@
 .single{
     .content-area{
-        padding: 96px 0;
+        padding: 100px 0 60px;
     }
 
     .has-sidebar{
@@ -249,25 +249,33 @@
                             height: calc(100% - 2px);
                             border: 0;
                             color: transparent;   
-                            background-color: transparent;                 
+                            background-color: transparent;
+                            outline: none;   
+                            transition: all 0.3s;              
                             &::before{
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                                 width: 100%;
                                 height: calc(100% - 2px);
-                                background: #FFF;
+                                background: #D19D64;
                                 text-align: center;
                                 line-height: 28px;
                                 font-family: "FontAwesome";
                                 content: "\F002";
                                 font-size: 16px;
                                 font-weight: normal;
-                                color: #353535;
+                                color: #fff;
                                 position: absolute;
                                 top: 1px;
                                 right: 1px;
                                 z-index: 1;
+                                transition: all 0.3s;
+                            }
+                            &:hover{
+                                &::before{
+                                    background: #000;
+                                }
                             }
                         }
                     }
@@ -663,7 +671,7 @@
                     &__thumbnail{
                         display: block;
                         position: relative;
-                        padding-bottom: 56%;
+                        padding-bottom: 60%;
                         border-radius: 3px;
                         background: #eee;
                         overflow: hidden;
@@ -678,6 +686,7 @@
                             text-rendering: auto;
                             text-transform: none;
                             position: absolute;
+                            left: 50%;
                             top: 50%;
                             transform: translate(-50%, -50%);
                             z-index: 3;
@@ -709,7 +718,6 @@
                         }
                         &:hover{
                             &::before{
-                                left: 50%;
                                 opacity: 1;
                             }
                             &::after{

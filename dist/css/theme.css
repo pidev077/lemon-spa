@@ -692,7 +692,7 @@
 }
 
 .single .content-area {
-  padding: 96px 0;
+  padding: 100px 0 60px;
 }
 
 .single .has-sidebar.posts-flex-box {
@@ -948,6 +948,8 @@
   border: 0;
   color: transparent;
   background-color: transparent;
+  outline: none;
+  transition: all 0.3s;
 }
 
 .single .has-sidebar .post-sidebar .wg-wrap .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__button::before {
@@ -956,18 +958,23 @@
   align-items: center;
   width: 100%;
   height: calc(100% - 2px);
-  background: #FFF;
+  background: #D19D64;
   text-align: center;
   line-height: 28px;
   font-family: "FontAwesome";
   content: "\F002";
   font-size: 16px;
   font-weight: normal;
-  color: #353535;
+  color: #fff;
   position: absolute;
   top: 1px;
   right: 1px;
   z-index: 1;
+  transition: all 0.3s;
+}
+
+.single .has-sidebar .post-sidebar .wg-wrap .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__button:hover::before {
+  background: #000;
 }
 
 @media (max-width: 991px) {
@@ -1460,7 +1467,7 @@
 .single .single-post-related .post-related-wrapper .post-related-list .post-related-item__thumbnail {
   display: block;
   position: relative;
-  padding-bottom: 56%;
+  padding-bottom: 60%;
   border-radius: 3px;
   background: #eee;
   overflow: hidden;
@@ -1477,6 +1484,7 @@
   text-rendering: auto;
   text-transform: none;
   position: absolute;
+  left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
@@ -1511,7 +1519,6 @@
 }
 
 .single .single-post-related .post-related-wrapper .post-related-list .post-related-item__thumbnail:hover::before {
-  left: 50%;
   opacity: 1;
 }
 
