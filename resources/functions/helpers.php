@@ -231,8 +231,7 @@ if (!function_exists('lemon_custom_social_share')) {
 		// Get social media sharing links
 		$twitter_url = 'https://twitter.com/intent/tweet?url=' . $url . '&text=' . $title;
 		$facebook_url = 'https://www.facebook.com/sharer/sharer.php?u=' . $url;
-		$whatsapp_url = 'whatsapp://send?text=' . $title . ' ' . $url;
-		$instagram_url = 'https://www.instagram.com/myprograming?url=' . $url;
+		$whatsapp_url = 'https://api.whatsapp.com/send?text=' . $title . ' ' . $url;
 		$linkedin_url = 'https://www.linkedin.com/shareArticle?mini=true&url=' . $url . '&title=' . $title;
 		$pinterest_url = 'https://www.pinterest.com/pin/create/button/?url=' . $url . '&media=' . $thumbnail[0] . '&description=' . $title;
 		// Output social media share links
@@ -242,7 +241,6 @@ if (!function_exists('lemon_custom_social_share')) {
 		echo '<a class="share-post-item" href="' . $twitter_url . '" target="_blank"><i class="fa fa-twitter"></i></a>';
 		echo '<a class="share-post-item" href="' . $facebook_url . '" target="_blank"><i class="fa fa-facebook"></i></a>';
 		echo '<a class="share-post-item" href="' . $whatsapp_url . '" target="_blank"><i class="fa fa-whatsapp"></i></a>';
-		echo '<a class="share-post-item" href="' . $instagram_url . '" target="_blank"><i class="fa fa-instagram"></i></a>';
 		echo '<a class="share-post-item" href="' . $linkedin_url . '" target="_blank"><i class="fa fa-linkedin"></i></a>';
 		echo '<a class="share-post-item" href="' . $pinterest_url . '" target="_blank"><i class="fa fa-pinterest"></i></a>';
 		echo '</div>';
