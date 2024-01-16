@@ -33,6 +33,9 @@ add_action('wp_enqueue_scripts', function () {
 	//Global
 	// wp_enqueue_style('lemon-theme-general-styles', $upload_dir['baseurl'] . '/styles_uploads/variable-css.css', [], THEME_VERSION);
 	
+	// Font Awesome
+	wp_enqueue_style('lemon-font-awesome',  THEME_URI . '/resources/assets/libs/font-awesome-4.7.0/css/font-awesome.min.css', [], THEME_VERSION);
+
 	// AOS
 	wp_enqueue_style('lemon-aos', 'https://unpkg.com/aos@2.3.1/dist/aos.css', [], THEME_VERSION);
 	wp_enqueue_script('lemon-aos', 'https://unpkg.com/aos@2.3.1/dist/aos.js', ['jquery'], THEME_VERSION, true);

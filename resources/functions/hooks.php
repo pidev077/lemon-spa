@@ -115,3 +115,13 @@ function lemon_woocommerce_loop_add_to_cart_link_func( $add_to_cart_html, $produ
 	);
 }
 
+// single template
+add_action('lemon_hook_single', 'lemon_single_template');
+
+// single post navigation
+add_action('lemon_hook_single_post_navigation', 'lemon_single_post_navigation');
+
+// single post related
+add_action('lemon_hook_single_post_related', 'lemon_single_post_related');
+
+
