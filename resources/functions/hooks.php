@@ -124,4 +124,7 @@ add_action('lemon_hook_single_post_navigation', 'lemon_single_post_navigation');
 // single post related
 add_action('lemon_hook_single_post_related', 'lemon_single_post_related');
 
+// single post related
+add_action('lemon_hook_custom_social_share', 'lemon_custom_social_share');
+
 

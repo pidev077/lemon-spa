@@ -44,6 +44,7 @@
                 <article id="post-<?php echo get_the_ID(); ?>" <?php post_class(); ?>> 
                     <div class="single-entry-header">
                         <div class="featured-image"><?php echo $post_thumbnail; ?></div>
+                        <?php do_action( 'lemon_hook_custom_social_share' ); ?>
                         <h2 class="post-title"><?php echo $title; ?></h2>
                         <div class="extra-meta">
                             <div class="post-author meta" titile="Post by">
