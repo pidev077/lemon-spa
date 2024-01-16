@@ -62,3 +62,51 @@
         transform: rotate(360deg);
     }
 }
+
+
+.elementor-widget-button{
+    &.be-btn-dentist-blue, &.be-btn-dentist{
+        a.elementor-button-link{
+            position: relative;
+            z-index: 9;
+
+            &::after{
+                content: " ";
+                display: inline-block;
+                position: absolute;
+                z-index: -1;
+                height: 0;
+                left: 50%;
+                top: 50%;
+                width: 0;
+                transition: $transition;
+            }
+
+            &:hover{
+                background-color: transparent !important;
+                color: #fff !important;
+                &::after{
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    &.be-btn-dentist{
+        a.elementor-button-link{
+            &::after{
+                background: #000;
+            }
+        }
+    }
+
+    &.be-btn-dentist-blue{
+        a.elementor-button-link{
+            &::after{
+                background: $dentist-color-primary;
+            }
+        }
+    }
+}
