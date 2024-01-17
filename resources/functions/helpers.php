@@ -56,7 +56,7 @@ if (!function_exists('lemon_blog_posts_navigation')) {
 					$html = $html . $next_button;
 				}
 
-				echo '<div class="pagination loop-pagination" ' . $animation . '>';
+				echo '<div class="pagination loop-pagination">';
 				echo    $html;
 				echo '</div>';
 
