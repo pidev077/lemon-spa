@@ -1,3 +1,14 @@
+@media (min-width: 1200px) {
+  .page-header .entry-title,
+  .site-footer .footer-inner,
+  .site-footer:not(.dynamic-footer),
+  .site-header .header-inner,
+  .site-header:not(.dynamic-header),
+  body:not([class*=elementor-page-]) .site-main {
+    max-width: 1150px;
+  }
+}
+
 /* lemon cosmetics */
 
 .cosmetics-btn a.elementor-button {
@@ -116,7 +127,7 @@
 .archive main.site-main {
   max-width: 1170px;
   margin: 0 auto;
-  padding: 90px 15px;
+  padding: 90px 10px;
 }
 
 .blog .page-header,
@@ -1960,7 +1971,7 @@
 .woocommerce.woocommerce-shop .site-main {
   max-width: 1170px;
   margin: 0 auto;
-  padding: 90px 15px;
+  padding: 90px 10px;
 }
 
 .woocommerce .woocommerce-breadcrumb {
