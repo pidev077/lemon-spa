@@ -71,9 +71,9 @@
     .select2-container--default{
         
         .select2-selection--single{
-            padding: 8px 0;
+            padding: 8px;
             height: auto;
-            border: 0;
+            border: 1px solid #D19D64;
             .select2-selection__arrow{
                 top: 50%;
                 transform: translateY(-50%);
