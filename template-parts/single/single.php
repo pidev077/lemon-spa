@@ -1,5 +1,5 @@
 <div class="lemon-single content-area">
-    <div class="post-container container">
+    <div class="post-container">
         <?php if ( is_active_sidebar('blog-sidebar') ):?>
         <div class="posts-flex-box has-sidebar">
         <?php endif;?>

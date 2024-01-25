@@ -128,3 +128,44 @@ add_action('lemon_hook_single_post_related', 'lemon_single_post_related');
 add_action('lemon_hook_custom_social_share', 'lemon_custom_social_share');
 
 
+// Display plus button after Add to Cart button.
+add_action( 'woocommerce_after_quantity_input_field', 'lemon_display_quantity_plus_func' );
+function lemon_display_quantity_plus_func() {
+	echo '<button type="button" class="plus">+</button>';
+}
+
+// Display minus button before Add to Cart button.
+add_action( 'woocommerce_before_quantity_input_field', 'lemon_display_quantity_minus_func' );
+function lemon_display_quantity_minus_func() {
+	echo '<button type="button" class="minus">-</button>';
+}
+
+add_action('wp_footer', 'lemon_wp_footer_func');
+function lemon_wp_footer_func() {
+	if ( is_product() || is_cart() ) {
+		wc_enqueue_js(
+			"$(document).on( 'click', 'button.plus, button.minus', function() {
+				var qty = $( this ).parent( '.quantity' ).find( '.qty' );
+				var val = parseFloat(qty.val());
+				var max = parseFloat(qty.attr( 'max' ));
+				var min = parseFloat(qty.attr( 'min' ));
+				var step = parseFloat(qty.attr( 'step' ));
+				if ( $( this ).is( '.plus' ) ) {
+					if ( max && ( max <= val ) ) {
+					qty.val( max ).change();
+					} else {
+					qty.val( val + step ).change();
+					}
+				} else {
+					if ( min && ( min >= val ) ) {
+					qty.val( min ).change();
+					} else if ( val > 1 ) {
+					qty.val( val - step ).change();
+					}
+				}
+			});"
+		);
+	}
+}
+
+

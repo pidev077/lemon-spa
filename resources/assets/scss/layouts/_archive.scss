@@ -2,9 +2,9 @@
 .archive{
     background: #f8f7f5;
     main.site-main{
-        max-width: 1170px;
+        max-width: 100%;
         margin: 0 auto;
-        padding: 90px 10px;
+        padding: 100px 0;
     }
 
     .page-header{
@@ -30,14 +30,9 @@
         }
     }
 
-    .container{
-        max-width: 1170px;
-        margin: 0 auto;
-    }
-
     .has-sidebar{
         .column-left{
-            width: calc(70% - 50px);
+            width: calc(70% - 40px);
             @media screen and (max-width: 1024px) {
                 width: 100%;
             }
@@ -144,11 +139,8 @@
     .sidebar{
         .wg-wrap{
             background: #FFFFFF;
-            padding: 32px 36px;
+            padding: 30px;
             border-radius: 2px;
-            @media screen and (max-width: 767px) {
-                padding: 30px;
-            }
             @media screen and (max-width: 575.98px) {
                 padding: 30px 16px;
             }
@@ -318,14 +310,26 @@
                         margin-right: 10px;
                     }
                     del{
-                        .amount{
-                            color: #111111;
+                        color: #111111;
+                        .woocommerce-Price-amount{
+                            color: inherit;
                         }
                     }
-                    .amount{
+                    ins{
                         font-size: 14px;
                         font-weight: 500;
                         color: #D19D64;
+                        .woocommerce-Price-amount{
+                            color: inherit;
+                        }
+                    }
+                    .woocommerce-Price-amount{
+                        color: #D19D64;
+                    }
+                    .star-rating{
+                        font-size: 13px;
+                        color: #D19D64;
+                        margin: 2px 0;
                     }
                 }
 

@@ -14,20 +14,24 @@ while ( have_posts() ) :
 	?>
 
 <main id="content" <?php post_class( 'site-main' ); ?> role="main">
-	<?php if ( apply_filters( 'lemon_elementor_page_title', true ) ) : ?>
-		<header class="page-header">
-			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		</header>
-	<?php endif; ?>
-	<div class="page-content">
-		<?php the_content(); ?>
-		<div class="post-tags">
-			<?php the_tags( '<span class="tag-links">' . __( 'Tagged ', 'lemon-main' ), null, '</span>' ); ?>
+	<div class="container">
+		<?php if ( apply_filters( 'lemon_elementor_page_title', true ) ) : ?>
+			<header class="page-header">
+				
+					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+				
+			</header>
+		<?php endif; ?>
+		<div class="page-content">
+			<?php the_content(); ?>
+			<div class="post-tags">
+				<?php the_tags( '<span class="tag-links">' . __( 'Tagged ', 'lemon-main' ), null, '</span>' ); ?>
+			</div>
+			<?php wp_link_pages(); ?>
 		</div>
-		<?php wp_link_pages(); ?>
-	</div>
 
-	<?php comments_template(); ?>
+		<?php comments_template(); ?>
+	</div>
 </main>
 
 	<?php

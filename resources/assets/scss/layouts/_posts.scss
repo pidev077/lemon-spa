@@ -1,7 +1,7 @@
 .posts{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 30px;
+    grid-gap: 25px;
     margin-bottom: 40px;
     .post-item{
         background: #FFFFFF;
@@ -42,7 +42,7 @@
             }
         }
         &__content{
-            padding: 24px 32px;
+            padding: 24px 30px;
         }
         &__title-link{
             text-decoration: none;

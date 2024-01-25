@@ -14,22 +14,20 @@ $classes = $has_sidebar ? 'column-left': '';
 
 ?>
 <main id="content" class="site-main" role="main">
+	<div class="container">
+		<?php if ( apply_filters( 'lemon_elementor_page_title', true ) ) : ?>
+			<header class="page-header">
+				<?php
+				$page_for_posts_id = get_option( 'page_for_posts' );
+				$page_for_posts_obj = get_post( $page_for_posts_id );
+				$blog_heading = ( is_archive() )? get_the_archive_title() : $page_for_posts_obj->post_title;
+				?>
+				<h1 class="entry-title"><?php echo $blog_heading; ?></h2>
+				<?php the_archive_description( '<p class="archive-description">', '</p>' ); ?>
+			</header>
+		<?php endif; ?>
 
-	<?php if ( apply_filters( 'lemon_elementor_page_title', true ) ) : ?>
-		<header class="page-header">
-			<?php
-			$page_for_posts_id = get_option( 'page_for_posts' );
-			$page_for_posts_obj = get_post( $page_for_posts_id );
-			$blog_heading = ( is_archive() )? get_the_archive_title() : $page_for_posts_obj->post_title;
-			?>
-			<h1 class="entry-title"><?php echo $blog_heading; ?></h2>
-			<?php the_archive_description( '<p class="archive-description">', '</p>' ); ?>
-		</header>
-	<?php endif; ?>
-
-	<div class="page-content <?php echo $has_sidebar ? 'has-sidebar' : ''; ?>">
-
-		<div class="container">
+		<div class="page-content <?php echo $has_sidebar ? 'has-sidebar' : ''; ?>">
 			<div class="row">
 				<div class="bt-content-area <?php echo esc_attr($classes); ?>">
 					<div class="posts">
@@ -53,7 +51,6 @@ $classes = $has_sidebar ? 'column-left': '';
 				<?php endif; ?>
 			</div>
 		</div>	
-
 	</div>
 
 </main>

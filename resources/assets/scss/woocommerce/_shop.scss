@@ -3,17 +3,21 @@
         background: #f8f7f5;
         
         .site-main{
-            max-width: 1170px;
+            max-width: 100%;
             margin: 0 auto;
-            padding: 90px 10px;
+            padding: 100px 0;
         }
     }
 
     .woocommerce-breadcrumb{
+        max-width: 1170px;
+        padding: 0 10px;
+        margin-left: auto;
+        margin-right: auto;
         font-size: 14px;
         font-weight: 600;
         line-height: 1.5;
-        color: #002866;
+        color: #333;
         text-transform: uppercase;
         a{
             color: #333333;
@@ -199,8 +203,8 @@
 
         display: grid;
         grid-template-columns: 1fr;
-        grid-column-gap: 30px;
-        grid-row-gap: 30px;
+        grid-column-gap: 25px;
+        grid-row-gap: 25px;
         margin: 0;
         &::before,
         &::after{
@@ -361,6 +365,7 @@
                 min-height: 30px;
             }
             .woocommerce-loop-product__title{
+                text-decoration: none;
                 color: #333333;
                 font-size: 16px;
                 font-weight: 600;
