@@ -1,6 +1,6 @@
 .posts{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 25px;
     margin-bottom: 40px;
     .post-item{
@@ -42,7 +42,7 @@
             }
         }
         &__content{
-            padding: 24px 30px;
+            padding: 24px;
         }
         &__title-link{
             text-decoration: none;
@@ -50,7 +50,7 @@
         &__title{
             color: #333333;
             font-weight: 600;
-            font-size: 20px;
+            font-size: 18px;
             line-height: 30px;
             margin-bottom: 12px;
             overflow: hidden;
@@ -68,6 +68,7 @@
             line-height: 16px;
             color: #333333;
             a{
+                text-transform: capitalize;
                 font-weight: 600;
                 text-decoration: none;
                 color: #333333;
@@ -118,7 +119,7 @@
             font-weight: 500;
             color: #fff;
             background-color: #D19D64;
-            padding: 12px 24px;
+            padding: 10px 20px;
             border-radius: 3px;
             text-align: center;
             transition: all .3s;
@@ -126,10 +127,6 @@
                 background-color: #000000;
             }
         }
-    }
-
-    @media screen and (max-width: 1024px) {
-        grid-template-columns: 1fr 1fr 1fr;
     }
 
     @media screen and (max-width: 800px) {

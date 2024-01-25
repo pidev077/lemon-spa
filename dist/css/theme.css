@@ -606,7 +606,7 @@ body {
 
 .posts {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 25px;
   margin-bottom: 40px;
 }
@@ -656,7 +656,7 @@ body {
 }
 
 .posts .post-item__content {
-  padding: 24px 30px;
+  padding: 24px;
 }
 
 .posts .post-item__title-link {
@@ -666,7 +666,7 @@ body {
 .posts .post-item__title {
   color: #333333;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 30px;
   margin-bottom: 12px;
   overflow: hidden;
@@ -688,6 +688,7 @@ body {
 }
 
 .posts .post-item__extra-meta a {
+  text-transform: capitalize;
   font-weight: 600;
   text-decoration: none;
   color: #333333;
@@ -745,7 +746,7 @@ body {
   font-weight: 500;
   color: #fff;
   background-color: #D19D64;
-  padding: 12px 24px;
+  padding: 10px 20px;
   border-radius: 3px;
   text-align: center;
   transition: all 0.3s;
@@ -753,12 +754,6 @@ body {
 
 .posts .post-item__readmore-btn:hover {
   background-color: #000000;
-}
-
-@media screen and (max-width: 1024px) {
-  .posts {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
 }
 
 @media screen and (max-width: 800px) {
