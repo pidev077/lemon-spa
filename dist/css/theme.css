@@ -755,13 +755,23 @@ body {
   background-color: #000000;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
   .posts {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .posts {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 @media screen and (max-width: 575.98px) {
+  .posts {
+    grid-template-columns: 1fr;
+  }
+
   .posts .post-item__content {
     padding: 24px 16px;
   }
@@ -2936,6 +2946,7 @@ body {
 }
 
 .single-product .content-area .product .woocommerce-tabs .panel #reviews .comment-form #comment {
+  color: #333;
   padding: 10px;
   border-radius: 3px;
   min-height: 160px;
@@ -3010,6 +3021,7 @@ body {
 }
 
 .single-product .content-area .product .woocommerce-tabs .panel #reviews .comment-form .form-submit input#submit {
+  outline: none;
   border-radius: 4px;
   padding: 14px 32px;
   background-color: #D19D64;

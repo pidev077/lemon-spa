@@ -391,6 +391,7 @@
                                 }
                             }
                             #comment{
+                                color: #333;
                                 padding: 10px;
                                 border-radius: 3px;
                                 min-height: 160px;
@@ -459,6 +460,7 @@
                                 overflow: hidden;
                                 display: inline-block;
                                 input#submit{
+                                    outline: none;
                                     border-radius: 4px;
                                     padding: 14px 32px;
                                     background-color: #D19D64;
