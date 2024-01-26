@@ -1,4 +1,26 @@
 
+@media (min-width: 768px){
+    .page-header .entry-title, 
+    .site-footer .footer-inner, 
+    .site-footer:not(.dynamic-footer), 
+    .site-header .header-inner, 
+    .site-header:not(.dynamic-header), 
+    body:not([class*=elementor-page-]) .site-main {
+        max-width: 750px;
+    }
+}
+
+@media (min-width: 992px){
+    .page-header .entry-title, 
+    .site-footer .footer-inner, 
+    .site-footer:not(.dynamic-footer), 
+    .site-header .header-inner, 
+    .site-header:not(.dynamic-header), 
+    body:not([class*=elementor-page-]) .site-main {
+        max-width: 1020px;
+    }
+}
+
 @media (min-width: 1200px){
     .page-header .entry-title, 
     .site-footer .footer-inner, 
@@ -7,17 +29,24 @@
     .site-header:not(.dynamic-header), 
     body:not([class*=elementor-page-]) .site-main {
         max-width: 1170px;
-        padding-left: 10px;
-        padding-right: 10px;
     }
+}
+
+.page-header .entry-title, 
+.site-footer .footer-inner, 
+.site-footer:not(.dynamic-footer), 
+.site-header .header-inner, 
+.site-header:not(.dynamic-header), 
+body:not([class*=elementor-page-]) .site-main {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 body{
     font-family: 'Oswald', sans-serif;
 }
 
-.container{
-    max-width: 1170px;
-    padding: 0 10px;
+main.site-main{
     margin: 0 auto;
+    padding: 100px 0;
 }

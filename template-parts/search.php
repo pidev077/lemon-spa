@@ -20,30 +20,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php endif; ?>
 	<div class="page-content">
 		<?php if ( have_posts() ) : ?>
+			<div class="posts">
 			<?php
 			while ( have_posts() ) :
 				the_post();
-				printf( '<h2><a href="%s">%s</a></h2>', esc_url( get_permalink() ), esc_html( get_the_title() ) );
-				the_post_thumbnail();
-				the_excerpt();
+
+				get_template_part( 'template-parts/posts/content','search' );
+
 			endwhile;
 			?>
+			</div>
+
+			<?php do_action('lemon_hook_blog_posts_navigation'); ?>
+
 		<?php else : ?>
-			<p><?php esc_html_e( 'It seems we can\'t find what you\'re looking for.', 'lemon-main' ); ?></p>
+			<div class="not-found">
+				<p><?php esc_html_e( 'It seems we can\'t find what you\'re looking for.', 'lemon-main' ); ?></p>
+				<?php echo get_search_form(); ?>
+			</div>
 		<?php endif; ?>
 	</div>
-
-	<?php wp_link_pages(); ?>
-
-	<?php
-	global $wp_query;
-	if ( $wp_query->max_num_pages > 1 ) :
-		?>
-		<nav class="pagination" role="navigation">
-			<?php /* Translators: HTML arrow */ ?>
-			<div class="nav-previous"><?php next_posts_link( sprintf( __( '%s older', 'lemon-main' ), '<span class="meta-nav">&larr;</span>' ) ); ?></div>
-			<?php /* Translators: HTML arrow */ ?>
-			<div class="nav-next"><?php previous_posts_link( sprintf( __( 'newer %s', 'lemon-main' ), '<span class="meta-nav">&rarr;</span>' ) ); ?></div>
-		</nav>
-	<?php endif; ?>
 </main>

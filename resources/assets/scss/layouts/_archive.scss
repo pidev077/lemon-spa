@@ -1,11 +1,6 @@
 .blog,
 .archive{
     background: #f8f7f5;
-    main.site-main{
-        max-width: 100%;
-        margin: 0 auto;
-        padding: 100px 0;
-    }
 
     .page-header{
         padding: 30px;
@@ -58,83 +53,7 @@
             margin-left: auto;
             margin-right: auto;
         }
-    }
-
-    .paging-navigation{
-        .pagination{
-            margin-bottom: 50px;
-            width: 100%;
-            display: flex;
-            align-items: center;
-    
-            .pagination-numbers-wrap{
-                margin: 0 20px;
-                flex-grow: 1;
-                text-align: center;
-            }
-            .page-numbers{
-                text-decoration: none;
-                display: inline-block;
-                height: 40px;
-                width: 40px;
-                line-height: 40px;
-                text-align: center;
-                vertical-align: top;
-                color: #D19D64;
-                border-radius: 3px;
-                background: #fff;
-                font-weight: 600;
-                margin: 2px;
-                transition: all 0.3s;
-                &.current{
-                    opacity: 0.8;
-                    color: #fff;
-                    background: #D19D64;
-                }
-                &:hover{
-                    color: #fff;
-                    background: #000000;
-                }
-            }
-            .page-button{
-                text-decoration: none;
-                display: inline-block;
-                vertical-align: middle;
-                padding: 10px 20px;
-                background: #D19D64;
-                color: #fff;
-                border-radius: 3px;
-                line-height: 20px;
-                font-size: 14px;
-                text-transform: uppercase;
-                white-space: nowrap;
-                position: relative;
-                overflow: hidden;
-                transition: all .3s;
-                &.disabled{
-                    opacity: 0.8;
-                    cursor: default;
-                }
-                &:hover{
-                    background-color: #000000;
-                }
-            }
-        }
-        @media (max-width: 767px) {
-            .pagination{
-                .pagination-numbers-wrap{
-                    margin: 0 15px;
-                }
-                .page-button{
-                    padding: 10px 16px;
-                    strong{
-                        display: none;
-                    }
-                }
-            }
-        }
-    }
-    
+    }   
 
     .sidebar{
         .wg-wrap{
@@ -215,23 +134,36 @@
                     line-height: 125%;
                     margin-top: 0;
                     margin-bottom: 16px;
+                    &::after{
+                        display: none;
+                    }
                 }
 
                 input[type=search]{
+                    padding: 0.5rem 1rem;
                     line-height: 22px;
                     font-size: 14px;
-                    outline-offset: 0;
-                    outline-color: #D19D64;
+                    border: 1px solid rgba(53, 53, 53, 0.1);
+                    border-radius: 3px;
+                    color: #333;
+                    height: 50px;
+                    outline: none;
+                    &:focus{
+                        border: 1px solid #d19d64;
+                    }
                 }
 
                 button{
+                    outline: none;
                     margin-left: 5px;
                     font-weight: 600;
-                    font-size: 14px;
+                    font-size: 13px;
                     line-height: 22px;
                     border-color: #D19D64;
                     background-color: #D19D64;
                     color: #FFFFFF;
+                    text-transform: uppercase;
+                    letter-spacing: 0.5px;
                     transition: all 0.3s;
                     &:hover{
                         border-color: #D17A1D;
@@ -253,7 +185,10 @@
                 .wc-block-price-filter__controls{
                     margin-bottom: 0;
                     input{
-                        outline-color: #D19D64;
+                        outline: none;
+                        &:focus{
+                            border: 1px solid #d19d64 !important;
+                        }
                     }
                 }
                 button{

@@ -1,0 +1,91 @@
+.search{
+    background: #f8f7f5;
+    .page-header{
+        padding: 30px;
+        background: #fff;
+        border-radius: 3px;
+        margin-bottom: 30px;
+        text-align: center;
+        .entry-title{
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 1.25;
+            color: #222222;
+            text-transform: uppercase;
+            margin: 0 auto;
+            span{
+                color: #d19d64;
+            }
+        }
+    }
+    
+    .not-found{
+        text-align: center;
+        p{
+            font-size: 20px;
+        }
+    }
+
+    form{
+        position: relative;
+        display: inline-block;
+        max-width: 100%;
+        width: 450px;
+        margin: 20px auto;
+        label{
+            display: block;
+            position: relative;
+            width: 100%;
+            margin-bottom: 0;
+            &::after{
+                content: "\f002";
+                position: absolute;
+                right: 25px;
+                top: 50%;
+                transform: translateY(-50%);
+                -webkit-transform: translateY(-50%);
+                display: inline-block;
+                font-family: "FontAwesome";
+                font-style: normal;
+                font-variant: normal;
+                font-weight: normal;
+                line-height: 1;
+                text-rendering: auto;
+                text-transform: none;
+                font-size: 24px;
+                color: #d19d64;
+            }
+        }
+        input{
+            padding: 0 35px 0 10px;
+            width: 100%;
+            height: 50px ;
+            border-radius: 100px;
+            padding-left: 24px;
+            padding-right: 80px;
+            color: #333;
+            border: 1px solid rgba(53, 53, 53, 0.1);
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            max-width: 100%;
+            &:focus{
+                border: 1px solid #d19d64;
+                box-shadow: none;
+                outline: none;
+            }
+        }
+        .search-submit{
+            width: 70px;
+            height: 50px;
+            padding: 0 25px;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            background: none;
+            font-size: 0;
+            opacity: 0;
+        }
+    }
+}

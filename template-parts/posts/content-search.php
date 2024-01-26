@@ -8,10 +8,9 @@
 	$animation = 'data-aos="fade-up" data-aos-duration="1000"';
 
     $post_id     = get_the_ID();
-    $thumbnail   = get_the_post_thumbnail( );
+    $post_type     = get_post_type( );
     $title       = get_the_title( );
     $post_date   = get_the_date( );
-    $post_categories = get_the_category( );
     $post_link = get_the_permalink();
     $excerpt = get_the_excerpt();
 
@@ -21,30 +20,8 @@
 ?>
 
 <article <?php post_class('post-item'); ?>>
-    <?php if( !empty( $thumbnail ) ): ?>
-    <a href="<?php echo esc_url( $post_link ); ?>" class="post-item__featured-thumbnail">
-        <div class="thumbnail-overlay"></div>
-        <?php echo $thumbnail; ?>
-    </a>
-    <?php endif; ?>
     <div class="post-item__content">
-        <?php if( !empty($post_categories ) ){ ?>
-        <div class="post-item__cats-meta meta">
-            <?php
-            echo '<div class="post-item__extra-meta-cats">';
-            foreach ( $post_categories as $key => $cat) {
-                $cat_id = $cat->term_id;
-                $cat_link = get_term_link( $cat, 'category' );
-                $cat_name = $cat->name;
-                echo '<a href="'.esc_url( $cat_link ).'" class="category link">'.__( $cat_name, 'lemon-main' ).'</a>';
-                if ( $key < count($post_categories) - 1 ) {
-                    echo ',';
-                }
-            }
-            echo '</div>';
-            ?>
-        </div>
-        <?php } ?>
+        <div class="post-item__post-type"><?php echo __( $post_type, 'lemon-main'); ?></div>
         <a href="<?php echo esc_url( $post_link ); ?>" class="post-item__title-link">
             <h3 class="post-item__title"><?php echo __( $title, 'lemon-main'); ?></h3>
         </a>
@@ -59,8 +36,6 @@
         </div>
         <?php if ( $excerpt ) {
             ?><div class="post-item__excerpt"><?php echo $excerpt; ?></div><?php
-        } ?>
-        
-        <a href="<?php echo esc_url( $post_link ); ?>" class="post-item__readmore-btn"><?php echo __('Read More', 'lemon-main'); ?></a>
+        } ?>        
     </div>
 </article>

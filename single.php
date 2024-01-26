@@ -7,10 +7,8 @@
 ?>
 <?php get_header();?>
 <main id="primary" class="site-main">
-    <div class="container">
-        <?php if ( have_posts() ) : ?>
-            <?php do_action( 'lemon_hook_single' ); ?>
-        <?php endif;?>       
-    </div>
+    <?php if ( have_posts() ) : ?>
+        <?php do_action( 'lemon_hook_single' ); ?>
+    <?php endif;?>       
 </main>    
 <?php get_footer(); ?>
