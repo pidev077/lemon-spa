@@ -1,0 +1,46 @@
+.page-header{
+    position: relative;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    max-width: 100vw;
+    padding: 180px 0 100px;
+    background: #fff;
+    text-align: center;
+    background-image: url(../images/bg-title.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+
+    .entry-title{
+        font-size: 45px;
+        font-weight: 700;
+        line-height: 1em;
+        color: #fff;
+        text-transform: uppercase;
+        margin: 0 auto;
+        span{
+            color: #d19d64;
+        }
+    }
+}
+
+.page-content{
+    padding: 90px 0;
+}
+
+.breadcrumbs{
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #fff;
+    a{
+        color: #fff;
+        &:hover{
+            color: #D19D64;
+        }
+    }
+}

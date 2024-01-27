@@ -91,11 +91,17 @@ body:not([class*=elementor-page-]) .site-main {
 
 body {
   font-family: "Oswald", sans-serif;
+  overflow-x: hidden;
 }
 
 main.site-main {
   margin: 0 auto;
-  padding: 100px 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
 }
 
 /* lemon cosmetics */
@@ -207,28 +213,59 @@ main.site-main {
   background: #0181e4;
 }
 
+.page-header {
+  position: relative;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  max-width: 100vw;
+  padding: 180px 0 100px;
+  background: #fff;
+  text-align: center;
+  background-image: url(../images/bg-title.jpg?7dc268a1b416f63f0f93fd3787f0ea68);
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.page-header .entry-title {
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 1em;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+
+.page-header .entry-title span {
+  color: #d19d64;
+}
+
+.page-content {
+  padding: 90px 0;
+}
+
+.breadcrumbs {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.breadcrumbs a {
+  color: #fff;
+}
+
+.breadcrumbs a:hover {
+  color: #D19D64;
+}
+
 .blog,
 .archive {
   background: #f8f7f5;
-}
-
-.blog .page-header,
-.archive .page-header {
-  padding: 30px;
-  background: #fff;
-  border-radius: 3px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.blog .page-header .entry-title,
-.archive .page-header .entry-title {
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 1.25;
-  color: #222222;
-  text-transform: uppercase;
-  margin: 0 auto;
 }
 
 .blog .page-header .archive-description,
@@ -825,6 +862,10 @@ main.site-main {
   .paging-navigation .pagination .page-button strong {
     display: none;
   }
+}
+
+.single .content-area {
+  padding: 90px 0;
 }
 
 .single .has-sidebar.posts-flex-box {
@@ -2086,10 +2127,7 @@ main.site-main {
 }
 
 .error404 {
-  background-image: url(../images/background-page-404.jpg?f0ed61d9085e7796edc9ddb433e44ceb);
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
+  background: #f8f7f5;
 }
 
 .error404 .error-404 {
@@ -2104,17 +2142,18 @@ main.site-main {
   margin-bottom: 30px;
   color: #fff;
   font-weight: 700;
+  margin-bottom: 0;
 }
 
 .error404 .error-404 h3 {
   font-size: 32px;
   font-weight: 400;
-  color: #fff;
+  color: #333;
 }
 
 .error404 .error-404 p {
   font-size: 18px;
-  color: #fff;
+  color: #333;
 }
 
 .error404 .error-404 .btn-go {
@@ -2218,27 +2257,6 @@ main.site-main {
   background: #f8f7f5;
 }
 
-.search .page-header {
-  padding: 30px;
-  background: #fff;
-  border-radius: 3px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.search .page-header .entry-title {
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 1.25;
-  color: #222222;
-  text-transform: uppercase;
-  margin: 0 auto;
-}
-
-.search .page-header .entry-title span {
-  color: #d19d64;
-}
-
 .search .not-found {
   text-align: center;
 }
@@ -2316,6 +2334,10 @@ main.site-main {
 
 .woocommerce.woocommerce-shop {
   background: #f8f7f5;
+}
+
+.woocommerce .main-woocommerce {
+  padding: 90px 0;
 }
 
 .woocommerce .woocommerce-breadcrumb {

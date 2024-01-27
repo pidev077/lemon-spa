@@ -37,6 +37,18 @@ $classes = $has_sidebar ? 'column-left': '';
      */
     do_action( 'woocommerce_before_main_content' );
 ?>
+	<?php if ( apply_filters( 'lemon_elementor_page_title', true ) ) : ?>
+		<div class="page-header">
+            <div class="container">
+                <h1 class="entry-title"><?php echo get_the_archive_title(); ?></h1>
+                <?php
+                if ( function_exists('yoast_breadcrumb') ) {
+                    yoast_breadcrumb( '<div id="breadcrumbs" class="breadcrumbs">','</div>' );
+                }
+                ?>
+            </div>
+		</div>
+	<?php endif; ?>
     <section class="main-woocommerce bt-section-space <?php echo $has_sidebar ? 'has-sidebar' : ''; ?>" role="main" itemprop="mainEntity" itemscope="itemscope" itemtype="http://schema.org/Blog">
         <div class="container">
             <div class="row">

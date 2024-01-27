@@ -44,9 +44,15 @@ body:not([class*=elementor-page-]) .site-main {
 
 body{
     font-family: 'Oswald', sans-serif;
+    overflow-x: hidden;
 }
 
 main.site-main{
     margin: 0 auto;
-    padding: 100px 0;
+}
+
+.container{
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
 }

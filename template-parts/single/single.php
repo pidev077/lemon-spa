@@ -1,3 +1,16 @@
+
+<?php if ( apply_filters( 'lemon_elementor_page_title', true ) ) : ?>
+    <div class="page-header">
+        <div class="container">
+            <h1 class="entry-title"><?php echo get_the_archive_title(); ?></h1>
+            <?php
+            if ( function_exists('yoast_breadcrumb') ) {
+                yoast_breadcrumb( '<div id="breadcrumbs" class="breadcrumbs">','</div>' );
+            }
+            ?>
+        </div>
+    </div>
+<?php endif; ?>
 <div class="lemon-single content-area">
     <div class="post-container">
         <?php if ( is_active_sidebar('blog-sidebar') ):?>

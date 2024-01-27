@@ -11,12 +11,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <main id="content" class="site-main" role="main">
 	<?php if ( apply_filters( 'lemon_elementor_page_title', true ) ) : ?>
-		<header class="page-header">
+		<div class="page-header">
 			<h1 class="entry-title">
 				<?php esc_html_e( 'Search results for: ', 'lemon-main' ); ?>
 				<span><?php echo get_search_query(); ?></span>
 			</h1>
-		</header>
+		</div>
 	<?php endif; ?>
 	<div class="page-content">
 		<?php if ( have_posts() ) : ?>

@@ -1,8 +1,5 @@
 .error404 {
-    background-image: url(../images/background-page-404.jpg);
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
+    background: #f8f7f5;
     .error-404{
         padding: 50px 0;
         text-align: center;
@@ -13,16 +10,17 @@
             margin-bottom: 30px;
             color: #fff;
             font-weight: 700;
+            margin-bottom: 0;
         }
 
         h3{
             font-size: 32px;
             font-weight: 400;
-            color: #fff;
+            color: #333;
         }
         p{
             font-size: 18px;
-            color: #fff;
+            color: #333;
         }
         .btn-go{
             text-decoration: none;

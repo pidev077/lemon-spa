@@ -25,6 +25,16 @@ add_action('wp', function () {
 
 });
 
+// remove woocommerce breadcrumb
+add_action('template_redirect', 'goza_remove_shop_breadcrumbs_func' );
+function goza_remove_shop_breadcrumbs_func(){
+ 
+    if ( is_shop() || is_product() ){
+        remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0);
+	}
+ 
+}
+
 // customize the archive title
 add_filter('get_the_archive_title', function ($title) {
 	if (is_category()) {
