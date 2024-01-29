@@ -2265,7 +2265,7 @@ main.site-main {
   font-size: 20px;
 }
 
-.search form {
+.search form:not(.elementor-form) {
   position: relative;
   display: inline-block;
   max-width: 100%;
@@ -2273,14 +2273,14 @@ main.site-main {
   margin: 20px auto;
 }
 
-.search form label {
+.search form:not(.elementor-form) label {
   display: block;
   position: relative;
   width: 100%;
   margin-bottom: 0;
 }
 
-.search form label::after {
+.search form:not(.elementor-form) label::after {
   content: "\F002";
   position: absolute;
   right: 25px;
@@ -2299,7 +2299,7 @@ main.site-main {
   color: #d19d64;
 }
 
-.search form input {
+.search form:not(.elementor-form) input {
   padding: 0 35px 0 10px;
   width: 100%;
   height: 50px;
@@ -2312,13 +2312,13 @@ main.site-main {
   max-width: 100%;
 }
 
-.search form input:focus {
+.search form:not(.elementor-form) input:focus {
   border: 1px solid #d19d64;
   box-shadow: none;
   outline: none;
 }
 
-.search form .search-submit {
+.search form:not(.elementor-form) .search-submit {
   width: 70px;
   height: 50px;
   padding: 0 25px;
@@ -2808,6 +2808,10 @@ main.site-main {
   background-color: #f8f7f5;
 }
 
+.single-product .content-area {
+  padding-top: 0;
+}
+
 .single-product .lemon-sidebar {
   order: 2;
 }
@@ -2841,6 +2845,10 @@ main.site-main {
   .single-product .content-area .woocommerce-message {
     font-size: 14px;
   }
+}
+
+.single-product .content-area .product {
+  margin-top: 90px;
 }
 
 .single-product .content-area .product .onsale {

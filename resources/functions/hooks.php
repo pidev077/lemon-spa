@@ -178,4 +178,23 @@ function lemon_wp_footer_func() {
 	}
 }
 
+// Single product
+add_action('woocommerce_before_single_product', 'lemmon_woocommerce_before_single_product');
+function lemmon_woocommerce_before_single_product() {
+	?>
+	<?php if ( apply_filters( 'lemon_elementor_page_title', true ) ) : ?>
+    <div class="page-header">
+        <div class="container">
+            <h1 class="entry-title"><?php echo get_the_title(); ?></h1>
+            <?php
+            if ( function_exists('yoast_breadcrumb') ) {
+                yoast_breadcrumb( '<div id="breadcrumbs" class="breadcrumbs">','</div>' );
+            }
+            ?>
+        </div>
+    </div>
+	<?php endif; ?>
+	<?php
+}
+
 

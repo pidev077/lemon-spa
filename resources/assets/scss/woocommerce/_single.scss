@@ -1,5 +1,9 @@
 .single-product{
     background-color: #f8f7f5;
+    .content-area{
+        padding-top: 0;
+    }
+
     .lemon-sidebar{
         order: 2;
     }
@@ -30,6 +34,7 @@
         }
           
         .product{
+            margin-top: 90px;
             .onsale{
                 min-height: 2.25em;
                 min-width: 3em;
