@@ -29,7 +29,7 @@ add_action('wp', function () {
 add_action('template_redirect', 'goza_remove_shop_breadcrumbs_func' );
 function goza_remove_shop_breadcrumbs_func(){
  
-    if ( is_shop() || is_product() ){
+    if ( is_shop() || is_product() || is_product_category()	){
         remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0);
 	}
  
