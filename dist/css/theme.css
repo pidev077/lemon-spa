@@ -230,6 +230,18 @@ main.site-main {
   align-items: center;
 }
 
+.page-header .entry-icon {
+  font-size: 50px;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.page-header .entry-icon svg {
+  width: 1em;
+  height: 1em;
+  fill: #fff;
+}
+
 .page-header .entry-title {
   font-size: 45px;
   font-weight: 700;
@@ -2155,7 +2167,6 @@ main.site-main {
 }
 
 .error404 .error-404 {
-  padding: 50px 0;
   text-align: center;
 }
 
@@ -2289,7 +2300,7 @@ main.site-main {
   font-size: 20px;
 }
 
-.search form:not(.elementor-form) {
+.search form:not(.elementor-form):not(.woocommerce-ordering) {
   position: relative;
   display: inline-block;
   max-width: 100%;
@@ -2297,14 +2308,14 @@ main.site-main {
   margin: 20px auto;
 }
 
-.search form:not(.elementor-form) label {
+.search form:not(.elementor-form):not(.woocommerce-ordering) label {
   display: block;
   position: relative;
   width: 100%;
   margin-bottom: 0;
 }
 
-.search form:not(.elementor-form) label::after {
+.search form:not(.elementor-form):not(.woocommerce-ordering) label::after {
   content: "\F002";
   position: absolute;
   right: 25px;
@@ -2323,7 +2334,7 @@ main.site-main {
   color: #d19d64;
 }
 
-.search form:not(.elementor-form) input {
+.search form:not(.elementor-form):not(.woocommerce-ordering) input {
   padding: 0 35px 0 10px;
   width: 100%;
   height: 50px;
@@ -2336,13 +2347,13 @@ main.site-main {
   max-width: 100%;
 }
 
-.search form:not(.elementor-form) input:focus {
+.search form:not(.elementor-form):not(.woocommerce-ordering) input:focus {
   border: 1px solid #d19d64;
   box-shadow: none;
   outline: none;
 }
 
-.search form:not(.elementor-form) .search-submit {
+.search form:not(.elementor-form):not(.woocommerce-ordering) .search-submit {
   width: 70px;
   height: 50px;
   padding: 0 25px;

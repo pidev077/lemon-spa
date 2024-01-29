@@ -13,7 +13,16 @@
     min-height: 400px;
     display: flex;
     align-items: center;
-
+    .entry-icon{
+        font-size: 50px;
+        line-height: 1;
+        margin-bottom: 20px;
+        svg{
+            width: 1em;
+            height: 1em;
+            fill: #fff;
+        }
+    }
     .entry-title{
         font-size: 45px;
         font-weight: 700;
