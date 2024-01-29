@@ -66,6 +66,13 @@
         }
     }
 
+    .woocommerce-info{
+        border-top-color: #D19D64;
+        &::before{
+            color: #D19D64;
+        }
+    }
+
     .select2-container--default{
         
         .select2-selection--single{

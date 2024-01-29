@@ -1,4 +1,5 @@
 .woocommerce-page{
+    background: #f8f7f5;
     form{
         &.woocommerce-cart-form,
         &.cart{
@@ -56,4 +57,131 @@
             }
         }
     }
+
+
+    .woocommerce-MyAccount-navigation{
+        padding: 40px 30px;
+        background: #fff;
+        border-radius: 3px;
+
+        ul{
+            list-style: none;
+            padding-left: 0;
+            li{
+                margin-bottom: 5px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                a{
+                    display: inline-block;
+                    color: #D19D64;
+                    font-size: 18px;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            margin-bottom: 30px;
+        }
+
+        @media screen and (max-width: 576px) {
+            padding: 40px 20px;
+        }
+    }
+
+    .woocommerce-MyAccount-content{
+        padding: 40px 30px;
+        background: #fff;
+        border-radius: 3px;
+
+        section{
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+
+        a{
+            color: #D19D64;
+            text-decoration: none;
+        }
+
+        .view{
+            background-color: #D19D64;
+            color: #fff;
+            outline: none;
+            &:hover{
+                color: #fff;
+                background-color: #D17A1D;
+            }
+        }
+
+        .wc-block-components-notice-banner{
+            &.is-info{
+                border-color: #D19D64;
+                svg{
+                    background-color: #D19D64;
+                }
+            }
+        }
+
+        .addresses{
+            .edit{
+                padding: 8px 16px;
+                color: #fff;
+                background-color: #D19D64;
+                border-radius: 3px;
+                &:hover{
+                    background-color: #D17A1D;
+                }
+            }
+        }
+
+        form{
+            .button{
+                margin-top: 10px;
+                background-color: #D19D64;
+                color: #fff;
+                min-height: 40px;
+                outline: none;
+                &:hover{
+                    background-color: #D17A1D;
+                }
+            }
+        }
+
+        table{
+            &:last-child{
+                margin-bottom: 0;
+            }
+            
+        }
+
+        @media screen and (max-width: 576px) {
+            padding: 40px 20px;
+        }
+
+    }
+
+    .woocommerce-order{
+        padding: 40px 30px;
+        background: #fff;
+        border-radius: 3px;
+
+        a{
+            color: #D19D64;
+            text-decoration: none;
+        }
+
+        section{
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+
+        @media screen and (max-width: 576px) {
+            padding: 40px 20px;
+        }
+    }
+
 }
