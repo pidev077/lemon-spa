@@ -83,6 +83,10 @@
 
             select{
                 outline-color: #D19D64;
+                outline: none;
+                &:focus{
+                    border: 1px solid #D19D64;
+                }
             }
 
             ul{
@@ -259,6 +263,18 @@
 
             .wc-block-product-categories{
                 margin-bottom: 0;
+                .wc-block-product-categories__dropdown{
+                    margin-right: 8px;
+                }
+                button{
+                    background: #D19D64;
+                    color: #fff;
+                    border-color: #D19D64;
+                    &:hover{
+                        border-color: #D17A1D;
+                        background-color: #D17A1D;
+                    }
+                }
             }
 
         }

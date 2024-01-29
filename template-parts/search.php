@@ -12,10 +12,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 <main id="content" class="site-main" role="main">
 	<?php if ( apply_filters( 'lemon_elementor_page_title', true ) ) : ?>
 		<div class="page-header">
-			<h1 class="entry-title">
-				<?php esc_html_e( 'Search results for: ', 'lemon-main' ); ?>
-				<span><?php echo get_search_query(); ?></span>
-			</h1>
+			<div class="container">
+				<h1 class="entry-title">
+					<?php esc_html_e( 'Results for: ', 'lemon-main' ); ?>
+					<span><?php echo get_search_query(); ?></span>
+				</h1>
+				<?php
+					if ( function_exists('yoast_breadcrumb') ) {
+						yoast_breadcrumb( '<div id="breadcrumbs" class="breadcrumbs">','</div>' );
+					}else{
+						if ( class_exists( 'woocommerce' ) ){
+							woocommerce_breadcrumb();
+						}
+					}
+				?>
+			</div>
 		</div>
 	<?php endif; ?>
 	<div class="page-content">

@@ -189,7 +189,9 @@ function lemmon_woocommerce_before_single_product() {
             <?php
             if ( function_exists('yoast_breadcrumb') ) {
                 yoast_breadcrumb( '<div id="breadcrumbs" class="breadcrumbs">','</div>' );
-            }
+            }else{
+				woocommerce_breadcrumb();
+			}
             ?>
         </div>
     </div>

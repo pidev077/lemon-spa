@@ -13,7 +13,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="error-404">
 		<?php if ( apply_filters( 'lemon_elementor_page_title', true ) ) : ?>
 			<header class="page-header">
-				<h1 class="entry-title"><?php esc_html_e( '404', 'lemon-main' ); ?></h1>
+				<div class="container">
+					<h1 class="entry-title"><?php esc_html_e( '404', 'lemon-main' ); ?></h1>
+				</div>
 			</header>
 		<?php endif; ?>
 		<div class="page-content">

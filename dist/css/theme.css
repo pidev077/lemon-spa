@@ -374,6 +374,12 @@ main.site-main {
 .blog .sidebar .wg-wrap select,
 .archive .sidebar .wg-wrap select {
   outline-color: #D19D64;
+  outline: none;
+}
+
+.blog .sidebar .wg-wrap select:focus,
+.archive .sidebar .wg-wrap select:focus {
+  border: 1px solid #D19D64;
 }
 
 .blog .sidebar .wg-wrap ul,
@@ -592,6 +598,24 @@ main.site-main {
 .blog .sidebar .wg-wrap .wc-block-product-categories,
 .archive .sidebar .wg-wrap .wc-block-product-categories {
   margin-bottom: 0;
+}
+
+.blog .sidebar .wg-wrap .wc-block-product-categories .wc-block-product-categories__dropdown,
+.archive .sidebar .wg-wrap .wc-block-product-categories .wc-block-product-categories__dropdown {
+  margin-right: 8px;
+}
+
+.blog .sidebar .wg-wrap .wc-block-product-categories button,
+.archive .sidebar .wg-wrap .wc-block-product-categories button {
+  background: #D19D64;
+  color: #fff;
+  border-color: #D19D64;
+}
+
+.blog .sidebar .wg-wrap .wc-block-product-categories button:hover,
+.archive .sidebar .wg-wrap .wc-block-product-categories button:hover {
+  border-color: #D17A1D;
+  background-color: #D17A1D;
 }
 
 .posts {
